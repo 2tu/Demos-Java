@@ -13,10 +13,10 @@ public class Main {
                 "<string xmlns=\"http://Golden.com/Golden/\"><OUTPUT><RESULT>OK</RESULT></OUTPUT></string>";
 
         try {
-            JAXBContext context = JAXBContext.newInstance(PSBCQAisinoResult.class);
+            JAXBContext context = JAXBContext.newInstance(com.tu.PSBCQAisinoResult.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
             StringReader reader = new StringReader(xml);
-            PSBCQAisinoResult result = (PSBCQAisinoResult) unmarshaller.unmarshal(reader);
+            com.tu.PSBCQAisinoResult result = (com.tu.PSBCQAisinoResult) unmarshaller.unmarshal(reader);
 
             System.out.println(String.format("result: %s", null != result ? result.toString() : "null"));
         } catch (JAXBException e) {
